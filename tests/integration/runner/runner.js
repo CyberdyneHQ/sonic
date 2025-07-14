@@ -73,7 +73,7 @@ function wrapper(name, scenario, timeout) {
 
   let timer = new Promise((_, reject) => {
     setTimeout(() => {
-      reject("Timeout reached");
+      reject(new Error("Timeout reached"));
     }, timeout);
   });
 
